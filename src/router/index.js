@@ -114,18 +114,25 @@ export const asyncRoutes = [
     children: [
       {
         path: 'project-management',
-        component: ()=>import('@/views/project-management/index'),
+        component: () => import('@/views/project-management/index'),
         name: 'projectManagement',
-        meta: { title: '项目管理', icon: 'list', noCache: true },
+        meta: { title: '项目管理', icon: 'list', noCache: true }
       },
       {
         path: 'project-detail',
         component: () => import('@/views/project-detail-list/index'),
         name: 'projectDetail',
         hidden: true,
-        meta: { title: '项目详情', noCache: true },
-      },   
-      ]
+        meta: { title: '项目详情', noCache: true }
+      },
+      {
+        path: 'detail-data',
+        component: () => import('@/views/detail-data/index'),
+        name: 'detailData',
+        hidden: true,
+        meta: { title: '具体数据', noCache: true }
+      }
+    ]
   },
   // menu->数据分析
   {
@@ -135,7 +142,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'data-analysis',
-        component: ()=>import('@/views/documentation/index'),
+        component: () => import('@/views/documentation/index'),
         name: 'dataAnalysis',
         meta: { title: '数据分析', icon: 'component', noCache: true }
       }
